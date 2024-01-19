@@ -1,0 +1,97 @@
+.dropdown-item {
+  font-size: 14px;
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link.active,
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-link:hover,
+.btn-primary,
+.badge-primary,
+.bg-primary,
+.pill-badge-primary {
+  background-color: #008bd0 !important;
+}
+
+.btn-primary .btn-outline-primary {
+  border-color: #008bd0 !important;
+}
+
+.table-hover tbody tr:hover th,
+.table-hover tbody tr:hover td,
+.btn-primary-light,
+.page-main-header .main-header-right .nav-right ul li svg,
+.page-wrapper .page-body-wrapper .page-header .breadcrumb .breadcrumb-item a,
+.page-main-header .main-header-right .toggle-sidebar svg,
+a,
+a:hover,
+.login-form .form-group .input-group-text,
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .sidebar-main-title > div h6,
+.page-wrapper.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu > li .nav-submenu li a,
+.btn-outline-primary,
+.recent-order-sec .table tr:hover td,
+.recent-order-sec .table tr:hover p {
+  color: #008bd0;
+}
+
+.table-hover tbody tr:hover,
+.btn-primary-light,
+.page-main-header .main-header-right .toggle-sidebar:hover,
+.login-form .form-group .input-group-text,
+.login-card,
+.recent-order-sec .table tr:hover {
+  background-color: rgba(0, 139, 208, 0.0705882353) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #2db9ff;
+}
+
+.bg-success,
+.pill-badge-success {
+  background-color: #20c997 !important;
+}
+
+.bg-warning,
+.pill-badge-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-danger,
+.pill-badge-danger {
+  background-color: #dc3545 !important;
+}
+.bg-danger .media.static-top-widget .align-self-center,
+.pill-badge-danger .media.static-top-widget .align-self-center {
+  background-color: #dc3545 !important;
+}
+
+.font-primary {
+  color: #20c997 !important;
+}
+
+.font-danger {
+  color: #dc3545 !important;
+}
+
+.badge {
+  font-size: 11px !important;
+}
+
+.page-main-header .main-header-right .nav-right .btn-primary-light svg path {
+  color: #00a0fd !important;
+}
+.page-main-header .main-header-right .nav-right .btn-primary-light:hover {
+  background-color: #00a0fd !important;
+}
+.page-main-header .main-header-right .nav-right .btn-primary-light:hover svg {
+  color: #fff;
+}
+
+@media (min-width: 480px) {
+  .logo-wrapper .img-fluid {
+    max-width: 50%;
+  }
+}

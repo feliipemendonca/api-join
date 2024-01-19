@@ -1,0 +1,55 @@
+version: "2"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+    volumes:
+      - db:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+
+  php:
+    build: ./docker/php
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/
+      # - $HOME/.composer/:$HOME/.composer/
+    links:
+      - mysql:db
+    depends_on:
+      - mysql
+
+  nginx:
+    image: jguyomard/laravel-nginx:1.13
+    volumes_from:
+      - php
+    ports:
+      - 80:80
+
+  admin:
+    image: "phpmyadmin/phpmyadmin"
+    ports:
+      - "8060:80"
+    links:
+      - mysql:db
+    depends_on:
+      - mysql
+  #    ports:
+  #        - "3306:3306"
+
+  redis:
+    image: redis:4.0-alpine
+    command: redis-server --appendonly yes
+#    ports:
+#        - "6379:6379"
+
+#  elastic:
+#    image: elasticsearch:5.5-alpine
+#    ports:
+#        - "9200:9200"
+
+volumes:
+  db:
